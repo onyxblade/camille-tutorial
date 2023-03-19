@@ -19,4 +19,13 @@ class Camille::Schemas::Books < Camille::Schema
     )
     response(Boolean)
   end
+
+  get :show do
+    params(
+      id: Number
+    )
+    response(
+      book: Book
+    )
+  end
 end

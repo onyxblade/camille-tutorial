@@ -4,6 +4,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <button id="hello">Hello</button>
     <button id="create">Create Book</button>
+    <button id="show">Show the first Book</button>
   </div>
 `
 
@@ -21,4 +22,9 @@ document.querySelector('#create')?.addEventListener('click', async () => {
     }
   })
   alert(data ? "Created book" : "Error happened")
+})
+
+document.querySelector('#show')?.addEventListener('click', async () => {
+  const data = await endpoints.books.show({id: 1})
+  alert(JSON.stringify(data.book))
 })
