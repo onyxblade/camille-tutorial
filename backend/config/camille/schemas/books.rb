@@ -11,11 +11,7 @@ class Camille::Schemas::Books < Camille::Schema
 
   post :create do
     params(
-      book: {
-        name: String,
-        author: String,
-        retail_price: Decimal
-      }
+      book: Omit[Book, [:id]]
     )
     response(Boolean)
   end

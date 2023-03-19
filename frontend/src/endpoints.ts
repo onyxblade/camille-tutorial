@@ -8,7 +8,7 @@ export type Decimal = number
 export default {
   books: {
     hello(): Promise<{message: string}>{ return request('get', '/books/hello', {}) },
-    create(params: {book: {name: string, author: string, retailPrice: Decimal}}): Promise<boolean>{ return request('post', '/books/create', params) },
+    create(params: {book: Omit<Book, "id">}): Promise<boolean>{ return request('post', '/books/create', params) },
     show(params: {id: number}): Promise<{book: Book}>{ return request('get', '/books/show', params) },
   },
 }
