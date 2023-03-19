@@ -4,7 +4,7 @@ import request from './request'
 export type Book = {id: number, name: string, author: string, retailPrice: Decimal, createdAt: DateTime, updatedAt: DateTime}
 export type Book_Params = Omit<Book, "id" | "createdAt" | "updatedAt">
 export type DateTime = string
-export type Decimal = number
+export type Decimal = string
 
 export default {
   books: {

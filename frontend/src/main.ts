@@ -18,7 +18,7 @@ document.querySelector('#create')?.addEventListener('click', async () => {
     book: {
       name: 'Metaprogramming Ruby',
       author: 'Paolo Perrotta',
-      retailPrice: 27.95
+      retailPrice: '27.95'
     }
   })
   alert(data ? "Created book" : "Error happened")
