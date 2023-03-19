@@ -7,6 +7,8 @@ class Camille::Types::Book < Camille::Type
     id: Number,
     name: String,
     author: String,
-    retail_price: Decimal
+    retail_price: Decimal,
+    created_at: DateTime,
+    updated_at: DateTime
   )
 end

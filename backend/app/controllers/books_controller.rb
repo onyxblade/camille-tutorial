@@ -17,7 +17,9 @@ class BooksController < ApplicationController
         id: book.id,
         name: book.name,
         author: book.author,
-        retail_price: book.retail_price
+        retail_price: book.retail_price,
+        created_at: book.created_at,
+        updated_at: book.updated_at
       }
     }
   end

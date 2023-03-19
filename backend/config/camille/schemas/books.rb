@@ -11,7 +11,7 @@ class Camille::Schemas::Books < Camille::Schema
 
   post :create do
     params(
-      book: Omit[Book, [:id]]
+      book: Book::Params
     )
     response(Boolean)
   end
